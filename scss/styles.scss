@@ -1,0 +1,59 @@
+@import "reset";
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+//StyleGuide
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.btn-primary {
+  background-color: $mainColor;
+}
+
+//Header
+.header {
+  width: 100%;
+  padding: 22px 0;
+  .logo {
+    display: block;
+    max-width: 118px;
+  }
+}
+
+.main-nav {
+  &:after {
+    @include clearfix;
+  }
+  ul {
+    float: left;
+    padding-top: 8px;
+    &:after {
+      @include clearfix;
+    }
+    li {
+      float: left;
+      & + li {
+        margin-left: 25px;
+      }
+      a {
+        font-family: $ProximaNova;
+        font-size: 14px;
+        font-weight: 600;
+        color: #39485d;
+        transition: all 100ms ease 100ms;
+        &:hover {
+          color: $mainColor;
+          opacity: .6;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .contacts-info {
+    float: left;
+  }
+}
