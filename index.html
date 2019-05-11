@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>main</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="header">
     <div class="container">
         <div class="row">
-            <div class="col-xs-3">
-                <a href="/" class="logo"><img src="img/logo-header.svg" alt="logo"></a>
+            <div class="col-lg-2">
+                <a href="/" class="logo"><img src="../img/logo-header.svg" alt="logo"></a>
             </div>
-            <div class="col-xs-9">
+            <div class="col-lg-10">
                 <nav class="main-nav">
                     <ul>
                         <li><a href="#">Клиники за рубежом</a></li>
@@ -25,13 +26,82 @@
                         <li><a href="#">О нас</a></li>
                     </ul>
                     <div class="contacts-info">
-                        <button class="btn btn-primary">+7 495 220-32-23</button>
+                        <button class="btn btn-primary phone-btn">+7 495 220-32-23</button>
+                        <button class="btn btn-primary request-btn">Оставить Заявку</button>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
 </header>
+<main class="main">
+    <section class="banner-gallery">
+        <!-- Slider main container -->
+        <div class="swiper-container-banner-gallery swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="banner-img">
+                        <img src="img/banner-img.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="banner-descr">
+                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-img">
+                        <img src="img/banner-img.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="banner-descr">
+                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-img">
+                        <img src="img/banner-img.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="banner-descr">
+                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="content-section treatment-direction-section right-bg">
+        <div class="container">
+            <span class="section-title">Направления лечения Orgamed</span>
+            <div class="section-descr-wrapper">
+                <span class="section-descr">Диагностика и лечения от лучших врачей!</span>
+                <button class="btn btn-primary see-more-btn">Смотреть все направления</button>
+            </div>
+            <div class="row treatment-direction-list">
+                <div class="col-lg-3">
+                    <div class="treatment-direction-item">
+                        <div class="treatment-direction-item-ico">
+                            <img src="img/ico-microorganisms.svg" alt="">
+                        </div>
+                        <span class="treatment-direction-item-title">Онкология</span>
+                        <span class="treatment-direction-item-descr">Лечение всех видов онкологических патологий</span>
+                        <a href="#" class="more-btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

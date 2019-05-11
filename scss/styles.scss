@@ -6,7 +6,7 @@
 //StyleGuide
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -14,46 +14,279 @@
   background-color: $mainColor;
 }
 
+.btn-primary.focus, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: $mainColor;
+  background-color: inherit;
+  border-color: $mainColor;
+}
+
 //Header
 .header {
   width: 100%;
   padding: 22px 0;
+  box-shadow: 0px 2px 2px 0 #0000000c;
+  border: solid 1px #e9ebef;
   .logo {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 118px;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .main-nav {
-  &:after {
-    @include clearfix;
-  }
+  display: flex;
+  align-items: center;
   ul {
-    float: left;
-    padding-top: 8px;
-    &:after {
-      @include clearfix;
-    }
+    display: flex;
+    align-items: center;
     li {
-      float: left;
       & + li {
         margin-left: 25px;
+      }
+      @media (max-width: 1200px) {
+        & + li {
+          margin-left: 15px;
+        }
       }
       a {
         font-family: $ProximaNova;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 700;
         color: #39485d;
         transition: all 100ms ease 100ms;
+        letter-spacing: -0.7px;
         &:hover {
           color: $mainColor;
           opacity: .6;
           text-decoration: none;
         }
       }
+      @media (max-width: 1200px) {
+        a {
+          font-size: 12px;
+        }
+      }
     }
   }
   .contacts-info {
-    float: left;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    width: 37%;
+    .phone-btn {
+      max-width: 174px;
+      width: 100%;
+      height: 38px;
+      line-height: 38px;
+      padding: 0 16px 0 44px;
+      position: relative;
+      border: solid 2.5px #e9ebef;
+      font-family: $ProximaNova;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      color: #c6cad0;
+      letter-spacing: -0.5px;
+      background-color: transparent;
+      margin-right: 16px;
+      &:after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/icons-phone.png);
+        -webkit-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        @include y-transform;
+      }
+    }
+    @media (max-width: 1200px) {
+      .phone-btn {
+        font-size: 12px;
+        padding: 0 5px 0 35px;
+        &:after {
+          width: 20px;
+          height: 20px;
+          left: 10px;
+
+        }
+      }
+    }
+    .request-btn {
+      max-width: 154px;
+      width: 100%;
+      height: 38px;
+      box-shadow: 0px 5px 10px 0 #00000026;
+      background-color: #4a5aef;
+      padding: 0 20px;
+      line-height: 38px;
+      font-family: $ProximaNova;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: -.5px;
+      color: #ffffff;
+      border: solid 2.5px $mainColor;
+    }
+    @media (max-width: 1200px) {
+      .request-btn {
+        font-size: 12px;
+        padding: 0 15px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .contacts-info {
+      margin-left: 20px;
+    }
+  }
+}
+.swiper-container-banner-gallery {
+  width: 100%;
+  height: 560px;
+  .swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    background-color: #4a5aef;
+    border: 3px solid #fff;
+    margin: 0;
+  }
+  .banner-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+    .banner-descr {
+      max-width: 487px;
+      width: 100%;
+      margin: 138px 0 44px;
+      .title {
+        display: block;
+        margin-bottom: 25px;
+        font-family: $Ubuntu;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: left;
+        color: #39485d;
+      }
+      .descr {
+        opacity: 0.75;
+        font-family: $Ubuntu;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        color: #6a7476c0;
+      }
+    }
+  }
+}
+
+.content-section {
+  padding: 121px 0;
+  position: relative;
+  &.right-bg {
+    &:after {
+      content: '';
+      width: 336px;
+      height: 517px;
+      opacity: 0.8;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-image: url(../img/combined-shape.svg);
+      border-image-source: linear-gradient(to right, #f4f8fc, #e2e9f080);
+    }
+  }
+  .section-title {
+    font-family: $Ubuntu;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    color: #39485d;
+  }
+  .section-descr-wrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .section-descr {
+      max-width: 470px;
+      width: 100%;
+      opacity: 0.75;
+      font-family: $Ubuntu;
+      font-size: 16px;
+      line-height: 25px;
+      text-align: left;
+      color: #6a7476c0;
+    }
+  }
+}
+.see-more-btn {
+  box-shadow: 0px 5px 10px 0 #00000026;
+  height: 38px;
+  font-family: $ProximaNova;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+.treatment-direction-list {
+  margin-top: 56px;
+}
+.treatment-direction-item {
+  box-shadow: 0px 5px 25px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .treatment-direction-item-ico {
+    max-width: 151px;
+    height: 151px;
+    border-radius: 50%;
+    background-color: rgba(242, 246, 250,0.5);
+    padding: 35px 0;
+    display: flex;
+  }
+  .treatment-direction-item-title {
+    font-family: $ProximaNova;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #4a5aef;
+    margin-top: 55px;
+  }
+  .treatment-direction-item-descr {
+    opacity: 0.75;
+    font-family: $ProximaNova;
+    font-size: 16px;
+    text-align: center;
+    color: #6a7476c0;
+    margin-top: 15px;
+  }
+  .more-btn {
+    font-family: $ProximaNova;
+    font-size: 16px;
+    text-align: center;
+    color: #4a90e2;
+    margin-top: 30px;
   }
 }
