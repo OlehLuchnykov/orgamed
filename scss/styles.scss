@@ -23,6 +23,10 @@
   background-color: inherit;
   border-color: $mainColor;
 }
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 //Header
 .header {
@@ -214,6 +218,25 @@
       border-image-source: linear-gradient(to right, #f4f8fc, #e2e9f080);
     }
   }
+  &.left-bg {
+    &:after {
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -ms-filter: fliph; /*IE*/
+      filter: fliph; /*IE*/
+      content: '';
+      width: 280px;
+      height: 517px;
+      opacity: 0.8;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url(../img/combined-shape.svg);
+      border-image-source: linear-gradient(to right, #f4f8fc, #e2e9f080);
+    }
+  }
   .section-title {
     font-family: $Ubuntu;
     font-size: 32px;
@@ -248,7 +271,7 @@
   color: #ffffff;
 }
 .treatment-direction-list {
-  margin-top: 56px;
+  margin-top: 36px;
 }
 .treatment-direction-item {
   box-shadow: 0px 5px 25px 0 rgba(0, 0, 0, 0.1);
@@ -258,6 +281,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.1, 1.1);
+    &:after {
+      opacity: 1;
+    }
+  }
   .treatment-direction-item-ico {
     max-width: 151px;
     height: 151px;
@@ -289,4 +332,96 @@
     color: #4a90e2;
     margin-top: 30px;
   }
+}
+
+.abroad-clinics {
+  background-color: #f7f8fa;
+}
+.slider-prev.swiper-button-prev {
+  width: 45px;
+  height: 45px;
+  border-radius: 22.5px;
+  box-shadow: 0px 5px 25px 0 #00000019;
+  background-color: #ffffff;
+  background-image: none;
+  left: -22.5px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include xy-transform;
+    background-image: url(../img/ico-prev.svg);
+    width: 12px;
+    height: 19px;
+    object-fit: contain;
+  }
+}
+.slider-next.swiper-button-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 22.5px;
+  box-shadow: 0px 5px 25px 0 #00000019;
+  background-color: #ffffff;
+  background-image: none;
+  right: -22.5px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include xy-transform;
+    background-image: url(../img/ico-next.svg);
+    width: 12px;
+    height: 19px;
+    object-fit: contain;
+  }
+}
+.four-column-slider {
+  position: relative;
+  margin-top: 35px;
+  .slider-img {
+    width: 100%;
+    height: 300px;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slider-descr {
+    padding-top: 14px;
+    .location {
+      font-family: $Ubuntu;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: left;
+      color: $mainColor;
+      display: inline-block;
+      width: 100%;
+    }
+    .clinics-name {
+      font-family: $ProximaNova;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: left;
+      color: #39485d;
+      margin-top: 17px;
+      display: inline-block;
+      width: 100%;
+    }
+    .clinics-descr {
+      opacity: 0.75;
+      font-family: $Ubuntu;
+      font-size: 14px;
+      text-align: left;
+      color: #6a7476c0;
+      max-height: 80px;
+      overflow: hidden;
+    }
+  }
+}
+
+.spa-resorts-clinics-slider {
+  position: relative;
+  margin-top: 35px;
 }

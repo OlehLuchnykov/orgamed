@@ -1,7 +1,7 @@
 var swiper1 = document.getElementsByClassName('.swiper-container-banner-gallery');
 
 if (swiper1) {
-    var galleryBannerSwiper = new Swiper ('.swiper-container-banner-gallery', {
+    var galleryBannerSwiper = new Swiper('.swiper-container-banner-gallery', {
         // Optional parameters
         direction: 'horizontal',
         loop: false,
@@ -17,5 +17,88 @@ if (swiper1) {
         fadeEffect: {
             crossFade: true
         },
+    });
+}
+var swiper2 = document.getElementsByClassName('.swiper-container-abroad-clinics');
+if (swiper2) {
+    var abroadClinicsSwiper = new Swiper('.swiper-container-abroad-clinics', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        speed: 500,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            1199: {
+                slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 1,
+            }
+        }
+    });
+}
+
+var swiper3 = document.getElementsByClassName('.swiper-container-our-clinics');
+if (swiper3) {
+    var ourClinicsSwiper = new Swiper('.swiper-container-our-clinics', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        speed: 500,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            1199: {
+                slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 1,
+            }
+        }
+    });
+}
+
+var swiper4 = document.getElementsByClassName('.swiper-container-spa-resorts');
+if (swiper4) {
+    var spaResortsSwiper = new Swiper('.swiper-container-spa-resorts', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        speed: 500,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 2,
+        spaceBetween: 20,
+        breakpoints: {
+            1199: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+            }
+        }
     });
 }
