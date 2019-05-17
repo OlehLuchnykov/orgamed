@@ -8,7 +8,7 @@ if (swiper1) {
         speed: 500,
         grabCursor: true,
         pagination: {
-            el: '.swiper-pagination'
+            el: '.swiper-container-banner-gallery .swiper-pagination'
         },
         autoplay: {
             delay: 5000,
@@ -28,8 +28,8 @@ if (swiper2) {
         speed: 500,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.abroad-clinics-slider .swiper-button-next',
+            prevEl: '.abroad-clinics-slider .swiper-button-prev',
         },
         slidesPerView: 4,
         spaceBetween: 20,
@@ -56,8 +56,8 @@ if (swiper3) {
         speed: 500,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.our-clinics-slider .swiper-button-next',
+            prevEl: '.our-clinics-slider .swiper-button-prev',
         },
         slidesPerView: 4,
         spaceBetween: 20,
@@ -84,8 +84,8 @@ if (swiper4) {
         speed: 500,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.spa-resorts-clinics-slider .swiper-button-next',
+            prevEl: '.spa-resorts-clinics-slider .swiper-button-prev',
         },
         slidesPerView: 2,
         spaceBetween: 20,
@@ -102,3 +102,32 @@ if (swiper4) {
         }
     });
 }
+var readMoreLink = document.querySelector('.read-more');
+var readMoreText = document.querySelector('.read-more-section');
+if (readMoreLink && readMoreText) {
+    readMoreLink.addEventListener('click', function (e) {
+        readMoreText.classList.toggle('expand');
+        readMoreLink.classList.toggle('more');
+    });
+}
+
+Mmenu.configs.classNames.selected = 'active';
+Mmenu.configs.offCanvas.page.selector = '.wrapper';
+
+document.addEventListener(
+    'DOMContentLoaded', () => {
+        const menu = new Mmenu( '.mobile-menu', {
+            slidingSubmenus: false
+        });
+
+        const api = menu.API;
+
+        document.querySelector( "#my-open-button" )
+            .addEventListener(
+                "click", ( evnt ) => {
+                    evnt.preventDefault();
+                    api.open();
+                }
+            );
+    }
+);

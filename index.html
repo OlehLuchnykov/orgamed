@@ -7,353 +7,553 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/mmenu.css">
+    <link rel="stylesheet" href="css/mburger.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-2">
-                <a href="/" class="logo"><img src="../img/logo-header.svg" alt="logo"></a>
-            </div>
-            <div class="col-lg-10">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#">Клиники за рубежом</a></li>
-                        <li><a href="#">Клиники России</a></li>
-                        <li><a href="#">Курорты и СПА</a></li>
-                        <li><a href="#">Услуги и стоимость</a></li>
-                        <li><a href="#">О нас</a></li>
-                    </ul>
-                    <div class="contacts-info">
-                        <button class="btn btn-primary phone-btn">+7 495 220-32-23</button>
-                        <button class="btn btn-primary request-btn">Оставить Заявку</button>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<main class="main">
-    <section class="banner-gallery">
-        <!-- Slider main container -->
-        <div class="swiper-container-banner-gallery swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <div class="banner-img">
-                        <img src="img/banner-img.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="banner-descr">
-                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
-                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="banner-img">
-                        <img src="img/banner-img.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="banner-descr">
-                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
-                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="banner-img">
-                        <img src="img/banner-img.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="banner-descr">
-                            <span class="title">Лечение за рубежом в лучших клиниках мира</span>
-                            <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-    <section class="content-section treatment-direction-section right-bg">
+<div class="wrapper">
+    <header class="header">
         <div class="container">
-            <span class="section-title">Направления лечения Orgamed</span>
-            <div class="section-descr-wrapper">
-                <span class="section-descr">Диагностика и лечения от лучших врачей!</span>
-                <button class="btn btn-primary see-more-btn">Смотреть все направления</button>
-            </div>
-            <div class="row treatment-direction-list">
-                <div class="col-lg-3">
-                    <div class="treatment-direction-item">
-                        <div class="treatment-direction-item-ico">
-                            <img src="img/ico-microorganisms.svg" alt="">
-                        </div>
-                        <span class="treatment-direction-item-title">Онкология</span>
-                        <span class="treatment-direction-item-descr">Лечение всех видов онкологических патологий</span>
-                        <a href="#" class="more-btn">Подробнее</a>
-                    </div>
+            <div class="row">
+                <div class="col-lg-2 col-8">
+                    <a href="/" class="logo"><img src="../img/logo-header.svg" alt="logo"></a>
                 </div>
-                <div class="col-lg-3">
-                    <div class="treatment-direction-item">
-                        <div class="treatment-direction-item-ico">
-                            <img src="img/ico=medical-heart.svg" alt="">
+                <div class="col-lg-10 d-none d-lg-block">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#">Клиники за рубежом</a></li>
+                            <li><a href="#">Клиники России</a></li>
+                            <li><a href="#">Курорты и СПА</a></li>
+                            <li><a href="#">Услуги и стоимость</a></li>
+                            <li><a href="#">О нас</a></li>
+                        </ul>
+                        <div class="contacts-info">
+                            <a href="tel:+7 495 220-32-23" class="btn btn-primary phone-btn">+7 495 220-32-23</a>
+                            <a href="#" class="btn btn-primary request-btn light">Оставить Заявку</a>
                         </div>
-                        <span class="treatment-direction-item-title">Кардиология</span>
-                        <span class="treatment-direction-item-descr">Диагностика и лечение кардиологических заболеваний</span>
-                        <a href="#" class="more-btn">Подробнее</a>
-                    </div>
+                    </nav>
                 </div>
-                <div class="col-lg-3">
-                    <div class="treatment-direction-item">
-                        <div class="treatment-direction-item-ico">
-                            <img src="img/ico-kidney.svg" alt="">
-                        </div>
-                        <span class="treatment-direction-item-title">Урология</span>
-                        <span class="treatment-direction-item-descr">Технологические достижений урохирургического робота</span>
-                        <a href="#" class="more-btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="treatment-direction-item">
-                        <div class="treatment-direction-item-ico">
-                            <img src="img/ico-uterus.svg" alt="">
-                        </div>
-                        <span class="treatment-direction-item-title">Гинекология</span>
-                        <span class="treatment-direction-item-descr">Эндоскопические операции с помощью  робота</span>
-                        <a href="#" class="more-btn">Подробнее</a>
-                    </div>
+                <div class="col-4 d-lg-none d-sm-block  text-right">
+                    <a href="#my-menu" class="mburger mburger--collapse" id="my-open-button">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="content-section abroad-clinics left-bg">
-        <div class="container">
-            <span class="section-title">Клиники за рубежом</span>
-            <div class="section-descr-wrapper">
-                <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                <button class="btn btn-primary see-more-btn">Смотреть все клиники</button>
-            </div>
-            <div class="abroad-clinics-slider four-column-slider">
-                <div class="swiper-container-abroad-clinics swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+    </header>
+    <main class="main">
+        <section class="banner-gallery">
+            <!-- Slider main container -->
+            <div class="swiper-container-banner-gallery swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="img/banner-img.png" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="banner-descr">
+                                <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                                <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="img/banner-img.png" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="banner-descr">
+                                <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                                <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="img/banner-img.png" alt="">
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                        <div class="container">
+                            <div class="banner-descr">
+                                <span class="title">Лечение за рубежом в лучших клиниках мира</span>
+                                <span class="descr">Профессиональные проверенные врачи и клиники для Вашего здоровья</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-prev swiper-button-prev"></div>
-                <div class="slider-next swiper-button-next"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-        </div>
-    </section>
-    <section class="content-section our-clinics left-bg">
-        <div class="container">
-            <span class="section-title">Клиники за рубежом</span>
-            <div class="section-descr-wrapper">
-                <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                <button class="btn btn-primary see-more-btn">Смотреть все клиники</button>
-            </div>
-            <div class="our-clinics-slider four-column-slider">
-                <div class="swiper-container-our-clinics swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
+        </section>
+        <section class="content-section treatment-direction-section right-bg">
+            <div class="container">
+                <span class="section-title">Направления лечения Orgamed</span>
+                <div class="section-descr-wrapper">
+                    <span class="section-descr">Диагностика и лечения от лучших врачей!</span>
+                    <button class="btn btn-primary see-more-btn">Смотреть все направления</button>
+                </div>
+                <div class="row treatment-direction-list">
+                    <div class="col-lg-3">
+                        <div class="treatment-direction-item">
+                            <div class="treatment-direction-item-ico">
+                                <img src="img/ico-microorganisms.svg" alt="">
                             </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
+                            <span class="treatment-direction-item-title">Онкология</span>
+                            <span class="treatment-direction-item-descr">Лечение всех видов онкологических патологий</span>
+                            <a href="#" class="more-btn">Подробнее</a>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="treatment-direction-item">
+                            <div class="treatment-direction-item-ico">
+                                <img src="img/ico=medical-heart.svg" alt="">
                             </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
+                            <span class="treatment-direction-item-title">Кардиология</span>
+                            <span class="treatment-direction-item-descr">Диагностика и лечение кардиологических заболеваний</span>
+                            <a href="#" class="more-btn">Подробнее</a>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="treatment-direction-item">
+                            <div class="treatment-direction-item-ico">
+                                <img src="img/ico-kidney.svg" alt="">
                             </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
+                            <span class="treatment-direction-item-title">Урология</span>
+                            <span class="treatment-direction-item-descr">Технологические достижений урохирургического робота</span>
+                            <a href="#" class="more-btn">Подробнее</a>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="treatment-direction-item">
+                            <div class="treatment-direction-item-ico">
+                                <img src="img/ico-uterus.svg" alt="">
                             </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
-                            </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                            </div>
+                            <span class="treatment-direction-item-title">Гинекология</span>
+                            <span class="treatment-direction-item-descr">Эндоскопические операции с помощью  робота</span>
+                            <a href="#" class="more-btn">Подробнее</a>
                         </div>
                     </div>
                 </div>
-                <div class="slider-prev swiper-button-prev"></div>
-                <div class="slider-next swiper-button-next"></div>
             </div>
-        </div>
-    </section>
-    <section class="content-section spa-resorts left-bg">
-        <div class="container">
-            <span class="section-title">Курорты и СПА</span>
-            <div class="section-descr-wrapper">
-                <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
-                <button class="btn btn-primary see-more-btn">Смотреть все курорты</button>
-            </div>
-            <div class="spa-resorts-clinics-slider">
-                <div class="swiper-container-spa-resorts swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="slider-img">
-                                <img src="img/hospital-palamvihar.png" alt="">
+        </section>
+        <section class="content-section abroad-clinics left-bg">
+            <div class="container">
+                <span class="section-title">Клиники за рубежом</span>
+                <div class="section-descr-wrapper">
+                    <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                    <button class="btn btn-primary see-more-btn">Смотреть все клиники</button>
+                </div>
+                <div class="abroad-clinics-slider four-column-slider">
+                    <div class="swiper-container-abroad-clinics swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
                             </div>
-                            <div class="slider-descr">
-                                <span class="location">Германия, Ганновер</span>
-                                <span class="clinics-name">Клиника Ольденбург</span>
-                                <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="slider-prev swiper-button-prev"></div>
+                    <div class="slider-next swiper-button-next"></div>
                 </div>
-                <div class="slider-prev swiper-button-prev"></div>
-                <div class="slider-next swiper-button-next"></div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="content-section our-clinics right-bg">
+            <div class="container">
+                <span class="section-title">Клиники за рубежом</span>
+                <div class="section-descr-wrapper">
+                    <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                    <button class="btn btn-primary see-more-btn">Смотреть все клиники</button>
+                </div>
+                <div class="our-clinics-slider four-column-slider">
+                    <div class="swiper-container-our-clinics swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hospital-palamvihar.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Германия, Ганновер</span>
+                                    <span class="clinics-name">Клиника Ольденбург</span>
+                                    <span class="clinics-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-prev swiper-button-prev"></div>
+                    <div class="slider-next swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section spa-resorts left-bg">
+            <div class="container">
+                <span class="section-title">Курорты и СПА</span>
+                <div class="section-descr-wrapper">
+                    <span class="section-descr">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Nam condimentum vitae ligula vel ornare. </span>
+                    <button class="btn btn-primary see-more-btn">Смотреть все курорты</button>
+                </div>
+                <div class="spa-resorts-clinics-slider">
+                    <div class="swiper-container-spa-resorts swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider-img">
+                                    <img src="img/hotel-overview.png" alt="">
+                                </div>
+                                <div class="slider-descr">
+                                    <span class="location">Бенгалуру, Индия</span>
+                                    <span class="raiting-wrapper">
 
-</main>
+                                    </span>
+                                    <span class="spa-name">Excellence Playa Mujeres</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-prev swiper-button-prev"></div>
+                    <div class="slider-next swiper-button-next"></div>
+                </div>
+                <div class="seo-text">
+                    <span class="seo-title">Особенности лечения в Orgamed – о чём говорят цифры</span>
+                    <div class="read-more-section">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget
+                            imperdiet
+                            neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu
+                            aliquet,
+                            molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra
+                            eget
+                            nibh.
+                            Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec
+                            vehicula
+                            rhoncus
+                            mattis. Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit. Praesent facilisis
+                            dolor
+                            sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor posuere luctus. Aenean
+                            tincidunt
+                            turpis sed dui aliquam vehicula. Praesent nec elit non dolor consectetur tincidunt sed in
+                            felis.
+                            Donec
+                            elementum, lacus at mattis tincidunt, eros magna faucibus sem, in condimentum est augue
+                            tristique risus.
+                            orem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget
+                            imperdiet
+                            neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu
+                            aliquet,
+                            molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra
+                            eget
+                            nibh.
+                            Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec
+                            vehicula
+                            rhoncus
+                            mattis. Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit. Praesent facilisis
+                            dolor
+                            sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor posuere luctus. Aenean
+                            tincidunt
+                            turpis sed dui aliquam vehicula. Praesent nec elit non dolor consectetur tincidunt sed in
+                            felis.
+                            Donec
+                            elementum, lacus at mattis tincidunt, eros magna faucibus sem, in condimentum est augue
+                            tristique risus.
+                            orem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget
+                            imperdiet
+                            neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu
+                            aliquet,
+                            molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra
+                            eget
+                            nibh.
+                            Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec
+                            vehicula
+                            rhoncus
+                            mattis. Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit. Praesent facilisis
+                            dolor
+                            sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor posuere luctus. Aenean
+                            tincidunt
+                            turpis sed dui aliquam vehicula. Praesent nec elit non dolor consectetur tincidunt sed in
+                            felis.
+                            Donec
+                            elementum, lacus at mattis tincidunt, eros magna faucibus sem, in condimentum est augue
+                            tristique risus.</p>
+                    </div>
+                    <span class="read-more">Показать больше</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <a href="#" class="footer-logo">
+                            <img src="img/footer-logo.svg" alt="footer-logo">
+                        </a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-lg-3 footer-menu">
+                                <ul>
+                                    <li><a href="#">Клиники за рубежом</a></li>
+                                    <li><a href="#">Клиники России</a></li>
+                                    <li><a href="#">Курорты и СПА</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 footer-menu">
+                                <ul>
+                                    <li><a href="#">Услуги и стоимость</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Политика Конфиденциальности</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5 footer-info">
+                                <a href="tel:+7 495 220-32-23">+7 495 220-32-23</a>
+                                <a href="mailto:info@orgamed.com">info@orgamed.com</a>
+                                <span>г. Москва, 2-й Тверской-Ямской переулок, дом 10, Метро «Маяковская»</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 footer-social-wrapper">
+                        <div class="footer-social">
+                            <a href="#" class="btn btn-primary request-btn dark">Оставить Заявку</a>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="10px" height="18px">
+                                            <path fill-rule="evenodd"
+                                                  d="M7.343,0.571 C5.072,0.571 3.516,1.957 3.516,4.499 L3.516,6.688 L0.954,6.688 L0.954,9.662 L3.516,9.662 L3.516,17.285 L6.589,17.285 L6.589,9.662 L9.141,9.662 L9.532,6.688 L6.589,6.688 L6.589,4.790 C6.589,3.936 6.820,3.343 8.056,3.343 L9.633,3.343 L9.633,0.692 C9.362,0.651 8.427,0.571 7.343,0.571 Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="17px" height="13px">
+                                            <path fill-rule="evenodd"
+                                                  d="M14.404,2.171 C15.077,1.770 15.589,1.137 15.830,0.384 C15.207,0.755 14.504,1.026 13.771,1.167 C13.178,0.534 12.335,0.143 11.401,0.143 C9.603,0.143 8.156,1.599 8.156,3.387 C8.156,3.638 8.186,3.889 8.236,4.130 C5.545,3.990 3.144,2.704 1.547,0.735 C1.265,1.217 1.105,1.770 1.105,2.373 C1.105,3.497 1.677,4.492 2.551,5.074 C2.019,5.054 1.517,4.904 1.085,4.663 C1.085,4.673 1.085,4.693 1.085,4.703 C1.085,6.280 2.200,7.586 3.686,7.887 C3.415,7.957 3.124,7.997 2.833,7.997 C2.622,7.997 2.421,7.977 2.220,7.947 C2.632,9.233 3.827,10.167 5.253,10.197 C4.138,11.071 2.742,11.583 1.225,11.583 C0.954,11.583 0.703,11.573 0.442,11.543 C1.878,12.467 3.586,13.000 5.424,13.000 C11.391,13.000 14.655,8.058 14.655,3.769 C14.655,3.628 14.655,3.487 14.645,3.347 C15.278,2.885 15.830,2.312 16.272,1.669 C15.690,1.920 15.057,2.101 14.404,2.171 Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="24px" height="15px">
+                                            <path fill-rule="evenodd"
+                                                  d="M21.043,8.626 L21.043,10.725 L18.934,10.725 L18.934,8.626 L16.835,8.626 L16.835,6.516 L18.934,6.516 L18.934,4.417 L21.043,4.417 L21.043,6.516 L23.143,6.516 L23.143,8.626 L21.043,8.626 ZM7.363,14.934 C3.295,14.934 -0.000,11.639 -0.000,7.571 C-0.000,3.503 3.295,0.208 7.363,0.208 C9.351,0.208 11.009,0.931 12.295,2.137 L10.296,4.055 C9.753,3.533 8.799,2.920 7.363,2.920 C4.851,2.920 2.802,5.000 2.802,7.571 C2.802,10.142 4.851,12.222 7.363,12.222 C10.276,12.222 11.370,10.123 11.541,9.048 L7.363,9.048 L7.363,6.516 L14.314,6.516 C14.384,6.888 14.434,7.260 14.434,7.742 C14.434,11.950 11.611,14.934 7.363,14.934 Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="20px" height="11px">
+                                            <path fill-rule="evenodd"
+                                                  d="M18.241,0.503 L15.348,0.523 C15.127,0.493 14.966,0.583 14.966,0.583 C14.966,0.583 14.796,0.674 14.715,0.895 C14.243,2.110 13.641,3.155 13.641,3.155 C12.355,5.345 11.832,5.465 11.622,5.324 C11.129,5.013 11.260,4.059 11.260,3.376 C11.260,1.246 11.581,0.362 10.627,0.131 C10.316,0.061 10.085,0.011 9.271,0.001 C8.237,-0.009 7.363,0.001 6.870,0.242 C6.539,0.402 6.288,0.764 6.439,0.784 C6.629,0.814 7.061,0.905 7.292,1.216 C7.292,1.216 7.543,1.628 7.584,2.532 C7.694,5.033 7.182,5.345 7.182,5.345 C6.790,5.555 6.107,5.204 5.103,3.135 C5.103,3.135 4.520,2.110 4.068,0.985 C3.988,0.774 3.827,0.664 3.827,0.664 C3.827,0.664 3.646,0.523 3.385,0.483 L0.633,0.503 C0.211,0.503 0.060,0.694 0.060,0.694 C0.060,0.694 -0.091,0.854 0.050,1.186 C2.200,6.239 4.651,8.770 4.651,8.770 C4.651,8.770 6.891,11.110 9.432,10.949 L10.587,10.949 C10.938,10.919 11.119,10.728 11.119,10.728 C11.119,10.728 11.280,10.548 11.270,10.216 C11.250,8.669 11.973,8.438 11.973,8.438 C12.676,8.217 13.580,9.935 14.545,10.598 C14.545,10.598 15.278,11.100 15.830,10.990 L18.402,10.949 C19.758,10.939 19.115,9.814 19.115,9.814 C19.065,9.724 18.743,9.031 17.196,7.595 C15.589,6.098 15.800,6.339 17.749,3.747 C18.934,2.170 19.406,1.206 19.255,0.794 C19.255,0.794 19.115,0.392 18.241,0.503 Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="11px" height="19px">
+                                            <path fill-rule="evenodd"
+                                                  d="M9.476,12.313 C8.512,12.926 7.186,13.167 6.312,13.257 L7.046,13.981 L9.728,16.663 C10.129,17.074 10.129,17.737 9.728,18.139 L9.607,18.270 C9.195,18.672 8.532,18.672 8.120,18.270 C7.447,17.587 6.463,16.602 5.438,15.578 L2.757,18.270 C2.345,18.672 1.682,18.672 1.280,18.270 L1.159,18.139 C0.748,17.737 0.748,17.074 1.159,16.663 C1.843,15.980 2.817,14.995 3.841,13.981 L4.565,13.257 C3.701,13.167 2.355,12.936 1.380,12.313 C0.235,11.570 -0.267,11.138 0.175,10.234 C0.436,9.722 1.149,9.290 2.094,10.033 C2.094,10.033 3.369,11.048 5.428,11.048 C7.488,11.048 8.763,10.033 8.763,10.033 C9.707,9.290 10.421,9.722 10.682,10.234 C11.124,11.138 10.622,11.570 9.476,12.313 ZM5.428,9.681 C2.917,9.681 0.868,7.643 0.868,5.131 C0.868,2.610 2.917,0.571 5.428,0.571 C7.940,0.571 9.989,2.610 9.989,5.131 C9.989,7.643 7.940,9.681 5.428,9.681 ZM5.428,2.881 C4.193,2.881 3.189,3.886 3.189,5.131 C3.189,6.367 4.193,7.371 5.428,7.371 C6.664,7.371 7.668,6.367 7.668,5.131 C7.668,3.886 6.664,2.881 5.428,2.881 Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span>Copyright © 2018 All Rights Reserved by Orgamed</span>
+            </div>
+        </div>
+    </footer>
+</div>
+<nav class="mobile-menu">
+    <ul>
+        <li><a href="#">Клиники за рубежом</a>
+            <ul>
+                <li><a href="/about/history/">History</a></li>
+                <li><a href="/about/team/">The team</a></li>
+                <li><a href="/about/address/">Our address</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Клиники России</a>
+            <ul>
+                <li><a href="/about/history/">History</a></li>
+                <li><a href="/about/team/">The team</a></li>
+                <li><a href="/about/address/">Our address</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Курорты и СПА</a></li>
+        <li><a href="#">Услуги и стоимость</a></li>
+        <li><a href="#">О нас</a></li>
+    </ul>
+    <div class="contacts-info">
+        <a href="tel:+7 495 220-32-23" class="btn btn-primary phone-btn">+7 495 220-32-23</a>
+        <a href="#" class="btn btn-primary request-btn light">Оставить Заявку</a>
+    </div>
+
+</nav>
 <script src="js/swiper.min.js"></script>
+<script src="js/mmenu.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
