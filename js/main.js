@@ -116,15 +116,20 @@ Mmenu.configs.offCanvas.page.selector = '.wrapper';
 
 document.addEventListener(
     'DOMContentLoaded', () => {
-        const menu = new Mmenu( '.mobile-menu', {
-            slidingSubmenus: false
+        const menu = new Mmenu('.mobile-menu', {
+            extensions: ["fx-menu-zoom", "fx-panels-zoom", "pagedim-black", "position-right"],
+            "navbars": [
+                {
+                    'use': false
+                }
+            ]
         });
 
         const api = menu.API;
 
-        document.querySelector( "#my-open-button" )
+        document.querySelector("#my-open-button")
             .addEventListener(
-                "click", ( evnt ) => {
+                "click", (evnt) => {
                     evnt.preventDefault();
                     api.open();
                 }
